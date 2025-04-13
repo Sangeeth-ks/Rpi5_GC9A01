@@ -28,6 +28,7 @@ while True:
 
 		# Convert to RGB565 if using 16-bit framebuffer
 		frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+		frame = cv2.rotate(frame, cv2.ROTATE_180_CLOCKWISE)
 		img = Image.fromarray(frame)
 
 		# Convert image to raw RGB565 format if needed
